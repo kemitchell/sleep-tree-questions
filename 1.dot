@@ -1,0 +1,21 @@
+digraph {
+  subgraph data {
+    node[shape=square];
+    rank=same;
+    // Data Order
+    a -> b -> c -> d -> e -> f;
+  }
+
+  subgraph index {
+    // Index Tree
+    3 -> {1, 5};
+    1 -> {0, 2};
+    5 -> {4, 6};
+
+    // Index-to-Data
+    0 -> a;
+    2 -> b;
+    4 -> c;
+    6 -> d;
+  }
+}
