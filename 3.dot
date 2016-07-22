@@ -3,7 +3,7 @@ digraph {
     node[shape=square];
     rank=same;
     // Data Order
-    a -> b -> c -> d -> e -> f -> g -> "?";
+    a -> b -> c -> d -> e -> f -> g -> null;
   }
 
   subgraph index {
@@ -24,6 +24,6 @@ digraph {
     8 -> e;
     10 -> f;
     12 -> g;
-    14 -> "?";
+    14 -> null;
   }
 }
