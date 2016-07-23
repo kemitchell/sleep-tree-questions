@@ -1,0 +1,57 @@
+digraph {
+  subgraph cluster_0 {
+    label="Data";
+    labelloc=b;
+    subgraph data {
+      node[shape=square];
+      rank=same;
+      g[style=dashed];
+      null[style=dashed];
+      // Data Order
+      a -> b -> c -> d -> e -> f -> g -> null;
+      a[label="\"a\""];
+      b[label="\"b\""];
+      c[label="\"c\""];
+      d[label="\"d\""];
+      e[label="\"e\""];
+      f[label="\"f\""];
+      g[label="\"g\""];
+    }
+  }
+  subgraph cluster_1 {
+    label="Heads";
+    subgraph heads {
+      rank=same;
+      edge[dir=back];
+      11[style=dashed];
+      1 -> 3 -> 7 -> 11;
+    }
+  }
+
+  subgraph index {
+    subgraph appending {
+      node[style=dashed];
+      13;
+      12;
+      14;
+    }
+    // Index Tree
+    11 -> 13;
+    13 -> {12, 14};
+    7 -> 9;
+    9 -> {8, 10}
+    3 -> 5;
+    1 -> {0, 2};
+    5 -> {4, 6};
+
+    // Index-to-Data
+    0 -> a;
+    2 -> b;
+    4 -> c;
+    6 -> d;
+    8 -> e;
+    10 -> f;
+    12 -> g;
+    14 -> null;
+  }
+}

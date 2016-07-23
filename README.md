@@ -3,3 +3,4 @@ SLEEP Register Indices for register with values `["a", "b", "c", ...]`.
 ![1](./1.png)
 ![2](./2.png)
 ![3](./3.png)
+![4](./4.png)
